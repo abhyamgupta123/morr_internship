@@ -64,8 +64,10 @@ class user_login(Resource):
             return {'message': 'User does not exists'}
 
 class user_profile(Resource):
-    def get(self, username):
-        user = db.users.find_one({'username': username.lower()})
+    @jwt_required
+    def get(self):
+        username = get_jwt_identity()
+        user = db.users.find_one({'username': username})
         if (user != None):
             del user['_id']
             del user['password']
