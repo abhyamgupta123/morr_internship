@@ -135,7 +135,7 @@ class update_contact(Resource):
         # checks if the contacts with particular uinqe email id exist or not:-
         contact = db.contacts.find_one(query)
         if contact == None:
-            msg = "{'message': 'contact with email {} doesn\'t exist'}".format(data['old_contact_email'])
+            msg = "{'message': 'contact with email {" + str(data['old_contact_email']) + "} doesn\'t exist'}"
             return Response(msg, status=404, mimetype='application/json')
 
         # to check if the new email aready exsists in the contact-book of user:-
