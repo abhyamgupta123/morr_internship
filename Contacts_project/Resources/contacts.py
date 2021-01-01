@@ -3,10 +3,7 @@ from flask import Response, render_template
 from Contacts_project import db
 from flask_jwt_extended import (create_access_token, decode_token, create_refresh_token, jwt_required, jwt_refresh_token_required, get_jwt_identity, get_raw_jwt, jwt_optional)
 import os, shutil
-import base64, uuid, time
-from datetime import datetime, timedelta
-from io import BytesIO
-from hashlib import sha256
+import uuid
 
 
 class create_contact(Resource):
