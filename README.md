@@ -47,7 +47,7 @@ Also the `user` related APIs provide extra level of security as each user can on
 <p>
 Here the verificatoin is done by first registering the user followed by logging it in and then assigning a unique special token to the user, which the user will use in it's all other API transactions which require authentication as a header value.
 
-> Header's syntax is like:- Name:Authorization, Attribute value: Bearer <access token> <img src = "images/headers.png">
+> Header's syntax is like:- Name:Authorization, Attribute value: Bearer \<access token\> <img src = "images/headers.png">
 
 </p>
 
